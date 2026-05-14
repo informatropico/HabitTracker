@@ -1,4 +1,6 @@
-site_name: Python Template
+site_name: Habit Tracker
+site_description: A simple habit tracker application
+
 theme:
   name: material
   language: it

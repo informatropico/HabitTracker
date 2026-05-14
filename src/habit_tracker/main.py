@@ -1,5 +1,5 @@
 import logging
-from python_template.logger import get_logger
+from habit_tracker.logger import get_logger
 
 logging.getLogger().setLevel(logging.DEBUG)
 
