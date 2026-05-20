@@ -1,0 +1,8 @@
+FIFO - First In First Out
+LIFO - Last In First Out
+OOP - Object Orientend Programming
+KISS - Keep It Simple Stupid
+DDD - Domain Driven Design
+UX - User eXperience
+ML - Machine Learning
+JS - JavaScript
