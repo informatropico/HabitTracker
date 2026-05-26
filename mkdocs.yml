@@ -10,6 +10,23 @@ theme:
 
 nav:
   - Home: index.md
+  - User Stories:
+    - US-001 Dichiarazione mattutina degli habit: user-stories/US-001.md
+    - US-002 Consuntivo serale degli habit: user-stories/US-002.md
+    - US-003 Aggiunta a posteriori di habit rispettati: user-stories/US-003.md
+    - US-004 Consultazione statistiche per habit: user-stories/US-004.md
+    - US-005 Habit dichiarati ma non rispettati: user-stories/US-005.md
+    - US-006 Habit raramente dichiarati: user-stories/US-006.md
+    - US-007 Habit non più dichiarati: user-stories/US-007.md
+    - US-008 Archiviazione habit come routine: user-stories/US-008.md
+    - US-009 Marcatura habit abbandonato: user-stories/US-009.md
+    - US-010 Visualizzazione habit archiviati come routine: user-stories/US-010.md
+    - US-011 Aggiunta di un nuovo habit: user-stories/US-011.md
+    - US-012 Riportare In corso un habit: user-stories/US-012.md
+    - US-013 Accedere alla giornata in corso: user-stories/US-013.md
+    - US-014 Modifica di una giornata precedente: user-stories/US-014.md
+    - US-015 Habit attivi in giornate precedenti: user-stories/US-015.md
+    - US-016 Accesso all'elenco degli habit: user-stories/US-016.md
   - Setup: setup.md
   - Changelog: changelog.md
 
@@ -23,3 +40,5 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition: {}
+  - tables: {}
