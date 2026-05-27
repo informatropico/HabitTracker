@@ -225,3 +225,4 @@ __marimo__/
 
 # Graphify cache
 graphify-out/cache/
+graphify-out/cost.json

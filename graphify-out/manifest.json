@@ -1,0 +1,227 @@
+{
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\src\\habit_tracker\\logger.py": {
+    "mtime": 1778738226.044339,
+    "ast_hash": "fd8d9c427a5c44cd860fa8e031338a56",
+    "semantic_hash": "fd8d9c427a5c44cd860fa8e031338a56"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\src\\habit_tracker\\main.py": {
+    "mtime": 1779268211.9182613,
+    "ast_hash": "7e0c87d835f84f9e0b2e76c96fb29ec4",
+    "semantic_hash": "7e0c87d835f84f9e0b2e76c96fb29ec4"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\src\\habit_tracker\\__init__.py": {
+    "mtime": 1778738226.044339,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\tests\\__init__.py": {
+    "mtime": 1778077898.272485,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\CLAUDE.md": {
+    "mtime": 1779919344.2026024,
+    "ast_hash": "7b5dccf21ba235d02c8fdb23fb5ad084",
+    "semantic_hash": "7b5dccf21ba235d02c8fdb23fb5ad084"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\mkdocs.yml": {
+    "mtime": 1779787304.718127,
+    "ast_hash": "ae814ced514b3737740e11280f7a97fb",
+    "semantic_hash": "ae814ced514b3737740e11280f7a97fb"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\README.md": {
+    "mtime": 1778738381.7549877,
+    "ast_hash": "4de5189ccc625d7fb4909fda7dfa710c",
+    "semantic_hash": "4de5189ccc625d7fb4909fda7dfa710c"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-ac.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "14b30bd71c62ea6d3a12ba9d7ba81fd3",
+    "semantic_hash": "14b30bd71c62ea6d3a12ba9d7ba81fd3"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-cr.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "41135a5bb4a08b06c522e4531d66163f",
+    "semantic_hash": "41135a5bb4a08b06c522e4531d66163f"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-goal.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "71785bbbc67f7d32de66cfe4cfddea05",
+    "semantic_hash": "71785bbbc67f7d32de66cfe4cfddea05"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-nfr.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "a2a7b84e5a5cfa32bad1be5abca54bd4",
+    "semantic_hash": "a2a7b84e5a5cfa32bad1be5abca54bd4"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-rf.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "27f704c7f68c299b26f5546b020444f7",
+    "semantic_hash": "27f704c7f68c299b26f5546b020444f7"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\add-us.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "3dd8f8bb54c7e68b647e31329c61a116",
+    "semantic_hash": "3dd8f8bb54c7e68b647e31329c61a116"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\analyze-mockup.md": {
+    "mtime": 1779919732.663906,
+    "ast_hash": "cac36858df86e7ef241d285ccdc2161b",
+    "semantic_hash": "cac36858df86e7ef241d285ccdc2161b"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\analyze.md": {
+    "mtime": 1779919717.1830475,
+    "ast_hash": "922fb455015d85decf3d40d5bd1bdd04",
+    "semantic_hash": "922fb455015d85decf3d40d5bd1bdd04"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\generate-arch.md": {
+    "mtime": 1779918770.5554285,
+    "ast_hash": "eb11d5489ad74fd962b4045caf98220f",
+    "semantic_hash": "eb11d5489ad74fd962b4045caf98220f"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\query.md": {
+    "mtime": 1779918725.1394784,
+    "ast_hash": "5e110442a00228094c352b1ddfcaa33f",
+    "semantic_hash": "5e110442a00228094c352b1ddfcaa33f"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\save.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "0c25430dbe5491ea3deac72148730f9e",
+    "semantic_hash": "0c25430dbe5491ea3deac72148730f9e"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\set-status.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "efcf9e43c3d18b2e7c5641664e8da880",
+    "semantic_hash": "efcf9e43c3d18b2e7c5641664e8da880"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\split-us.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "8d3552635005afa8dc10a09e7b255ffb",
+    "semantic_hash": "8d3552635005afa8dc10a09e7b255ffb"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\.claude\\commands\\start.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "438ae2fde9b94b704b0b5b4b48ea67c5",
+    "semantic_hash": "438ae2fde9b94b704b0b5b4b48ea67c5"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\changelog.md": {
+    "mtime": 1779919077.8386207,
+    "ast_hash": "69149169a5d134fc7b117574b9a93f53",
+    "semantic_hash": "69149169a5d134fc7b117574b9a93f53"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\index.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "1f86fd2acfe1152d4c8d16073af89b48",
+    "semantic_hash": "1f86fd2acfe1152d4c8d16073af89b48"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\setup.md": {
+    "mtime": 1779921024.9501598,
+    "ast_hash": "8515764281850ad3c2ff814ee748af98",
+    "semantic_hash": "8515764281850ad3c2ff814ee748af98"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\business\\objectives.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "87b0fdb1e971266a3080e45f8a052908",
+    "semantic_hash": "87b0fdb1e971266a3080e45f8a052908"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\requirements\\business-rules.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "e169ef7c692979059aa23194bee543a6",
+    "semantic_hash": "e169ef7c692979059aa23194bee543a6"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\requirements\\non-functional.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "38e821471b5b4b003b5a576d48eefc0c",
+    "semantic_hash": "38e821471b5b4b003b5a576d48eefc0c"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-001.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "9b5054e460f47ea57a85a281026ea8c1",
+    "semantic_hash": "9b5054e460f47ea57a85a281026ea8c1"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-002.md": {
+    "mtime": 1779806621.3238769,
+    "ast_hash": "53ddee730341e5f299bd1f3a2b4cc225",
+    "semantic_hash": "53ddee730341e5f299bd1f3a2b4cc225"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-003.md": {
+    "mtime": 1779806622.3499694,
+    "ast_hash": "9eefb24d31872ed3ae3e354bef946e0f",
+    "semantic_hash": "9eefb24d31872ed3ae3e354bef946e0f"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-004.md": {
+    "mtime": 1779806623.3791144,
+    "ast_hash": "4342e6f443ac5153f53ef062f7f3b1e2",
+    "semantic_hash": "4342e6f443ac5153f53ef062f7f3b1e2"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-005.md": {
+    "mtime": 1779806624.4118745,
+    "ast_hash": "069af65ffe7538383303310c13ba4443",
+    "semantic_hash": "069af65ffe7538383303310c13ba4443"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-006.md": {
+    "mtime": 1779806625.4498875,
+    "ast_hash": "fc39130a97dfc9ae3986c0a68b558be8",
+    "semantic_hash": "fc39130a97dfc9ae3986c0a68b558be8"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-007.md": {
+    "mtime": 1779806626.4808095,
+    "ast_hash": "c8f50b238fc45e4a4027960524ef0bc6",
+    "semantic_hash": "c8f50b238fc45e4a4027960524ef0bc6"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-008.md": {
+    "mtime": 1779807386.601612,
+    "ast_hash": "2e02cbc79504d6a3c28c87d0ee7dfb3f",
+    "semantic_hash": "2e02cbc79504d6a3c28c87d0ee7dfb3f"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-009.md": {
+    "mtime": 1779807393.635384,
+    "ast_hash": "8f8807f2b26c3ae4da2243f84b46da9b",
+    "semantic_hash": "8f8807f2b26c3ae4da2243f84b46da9b"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-010.md": {
+    "mtime": 1779806629.5788295,
+    "ast_hash": "d2be3b181b10a8bdd940c9fe537f1c1d",
+    "semantic_hash": "d2be3b181b10a8bdd940c9fe537f1c1d"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-011.md": {
+    "mtime": 1779806630.6146708,
+    "ast_hash": "1da30d7bf4380cd73de909a72c41165d",
+    "semantic_hash": "1da30d7bf4380cd73de909a72c41165d"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-012.md": {
+    "mtime": 1779806631.6430187,
+    "ast_hash": "bb48b3d9fac10f278789a69579a1f4b6",
+    "semantic_hash": "bb48b3d9fac10f278789a69579a1f4b6"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-013.md": {
+    "mtime": 1779807365.1765387,
+    "ast_hash": "f673160b02c5ba38efbf22b5b2d2d653",
+    "semantic_hash": "f673160b02c5ba38efbf22b5b2d2d653"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-014.md": {
+    "mtime": 1779806633.7232444,
+    "ast_hash": "8abb70fd40a8374eb7b38f96112aef9b",
+    "semantic_hash": "8abb70fd40a8374eb7b38f96112aef9b"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-015.md": {
+    "mtime": 1779806634.758031,
+    "ast_hash": "d5a0ec1d70723823458ba6bf55c5bb26",
+    "semantic_hash": "d5a0ec1d70723823458ba6bf55c5bb26"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-016.md": {
+    "mtime": 1779806635.7957647,
+    "ast_hash": "00cbddcff462bd82a75cbe9fa07e8e90",
+    "semantic_hash": "00cbddcff462bd82a75cbe9fa07e8e90"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\docs\\user-stories\\US-017.md": {
+    "mtime": 1779863871.640348,
+    "ast_hash": "a549a5c815c1c5f63a19851b691ce7c1",
+    "semantic_hash": "a549a5c815c1c5f63a19851b691ce7c1"
+  },
+  "C:\\Users\\matti\\Documents\\Workspace\\HabitTracker\\logs\\2026-05-27-08-33.md": {
+    "mtime": 1779863871.6561756,
+    "ast_hash": "2c389aaf341864087795967384f50f49",
+    "semantic_hash": "2c389aaf341864087795967384f50f49"
+  }
+}

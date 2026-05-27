@@ -7,6 +7,8 @@ Questo è un template Python moderno che integra:
 - **Poetry**: gestione delle dipendenze e del packaging
 - **MkDocs**: documentazione automatica e sito statico
 - **Python**: linguaggio di programmazione
+- **Claude Code**
+- **Graphify**
 
 Il template è mantenuto con diversi branch, ognuno corrispondente a una versione specifica. Il branch `main` contiene sempre l'ultima versione disponibile.
 
@@ -90,6 +92,14 @@ ssh -T git@github.com
 brew install --cask visual-studio-code
 ```
 
+```bash
+# 1. Installa globalmente Graphify
+pipx install graphifyy
+
+# 2. installare il comaando globalmente (una volta per pc)
+graphify install
+```
+
 Una volta scaricato il template, è necessario installare tutte le dipendenze:
 
 ```bash
@@ -100,6 +110,28 @@ Questo comando installerà:
 - Tutte le dipendenze principali
 - Tutte le dipendenze di sviluppo
 - Gli strumenti necessari per la documentazione e il testing
+
+
+## Strumenti AI
+
+### Sfruttare Claude Code
+Assicurarsi di avere installato Claude COde sul PC (almeno piano pro)
+Leggere il documento CLAUDE.md per vedere tutti i comandi personalizzati disponibili
+Avviare una sessione di Claude Code sul repo
+Interagire con la AI
+
+### Utilizzare Graphify
+```bash
+# 1. Entra nella root di HabitTracker
+cd ~/Projects/HabitTracker
+
+# 2. Apri Claude Code
+claude
+
+# 3. Esegui
+/graphify
+```
+
 
 ## Logger
 
