@@ -56,5 +56,6 @@ Come Utente ho la necessità di comprendere quali abitudini non riesco a rispett
 | [US-014](user-stories/US-014.md) | Modifica di una giornata precedente | Bozza | — |
 | [US-015](user-stories/US-015.md) | Visualizzazione habit attivi in giornate precedenti non completati | Bozza | — |
 | [US-016](user-stories/US-016.md) | Accesso all'elenco degli habit | Bozza | — |
+| [US-017](user-stories/US-017.md) | Segnale visivo di giornata completata | Bozza | 2026-05-27 |
 
 

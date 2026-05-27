@@ -219,3 +219,9 @@ __marimo__/
 
 # Mac files
 .DS_Store
+
+# Obsidian
+.obsidian/
+
+# Graphify cache
+graphify-out/cache/
