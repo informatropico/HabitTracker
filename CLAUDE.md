@@ -20,7 +20,8 @@ project-root/
 ├── CLAUDE.md               ← questo file
 ├── raw/                    ← materiale grezzo in input (NON modificare i file esistenti)
 │   ├── meetings/           ← note di meeting da analizzare
-│   └── brainstorm/         ← idee informali e appunti
+│   ├── brainstorm/         ← idee informali e appunti
+│   └── manifest.md         ← registro implicito dei file analizzati (aggiornato da /analyze)
 ├── docs/                   ← documentazione formale (output)
 │   ├── index.md            ← home del progetto + tabella user stories
 │   ├── business/
@@ -34,6 +35,10 @@ project-root/
 │   │   └── CR-*.md         ← change request
 │   ├── decisions/
 │   │   └── ADR-*.md        ← architecture decision records
+│   ├── architecture/
+│   │   ├── overview.md     ← componenti principali e diagramma sistema
+│   │   ├── data-model.md   ← entità dati e relazioni (con diagramma ER Mermaid)
+│   │   └── class-diagram.md ← diagramma classi (generato da /generate-arch)
 │   └── setup.md            ← guida installazione
 ├── wiki/                   ← knowledge base di lavoro (mantenuta da Claude Code)
 │   ├── requirements/       ← requisiti estratti da raw/ in lavorazione
@@ -53,6 +58,13 @@ project-root/
 - `docs/` è output formale — modifica solo su comando esplicito o dopo conferma
 - `graphify-out/` è generato automaticamente — non toccare mai
 
+**Convenzione file grezzi analizzati:**
+Un file in `raw/` si considera analizzato quando esiste un file corrispondente in
+`wiki/requirements/` con il nome della fonte nel filename
+(es. `raw/meetings/kickoff.md` → `wiki/requirements/2026-05-20-kickoff.md`).
+Non modificare i file in `raw/` per segnalarne lo stato: la traccia vive nel wiki
+e in `raw/manifest.md`.
+
 ---
 
 ## Modi operativi
@@ -66,7 +78,8 @@ Attiva quando lavori su requisiti, user stories, business rules, change request.
 
 ### Modalità Sviluppatore
 Attiva quando lavori su codice, architettura, debugging.
-- Leggi sempre `graphify-out/GRAPH_REPORT.md` all'inizio della sessione
+- Leggi sempre `graphify-out/GRAPH_REPORT.md` all'inizio della sessione (se disponibile)
+- Leggi sempre `docs/architecture/overview.md` per il contesto architetturale corrente (se disponibile)
 - Leggi sempre `logs/` per capire il contesto delle sessioni precedenti
 - Segui le convenzioni di `docs/decisions/ADR-*.md` per scelte architetturali
 
@@ -80,6 +93,37 @@ Attiva quando lavori su codice, architettura, debugging.
 1. Leggi gli ultimi 3 file in `logs/` ordinati per data
 2. Leggi `docs/index.md` per lo stato corrente delle US
 3. Produci un sommario: cosa è stato fatto, cosa è in sospeso, cosa è il prossimo passo suggerito
+
+---
+
+### /query "[domanda]"
+**Scopo:** Rispondere a una domanda sul progetto cercando nelle fonti documentali rilevanti.
+**Azioni:**
+1. Analizza la domanda e identifica il tipo di risposta cercata:
+   - Decisione presa → leggi `docs/decisions/ADR-*.md`
+   - Comportamento del sistema / requisito → leggi `docs/user-stories/US-*.md` e `docs/requirements/business-rules.md`
+   - Criteri di accettazione / test → leggi le sezioni Gherkin nelle US pertinenti
+   - Obiettivo di business → leggi `docs/business/objectives.md`
+   - Storico sessioni / cosa è stato fatto → leggi tutti i file in `logs/`
+   - Stato di un artefatto → leggi `docs/index.md` poi il file specifico
+   - Concetto di dominio → leggi `wiki/concepts/` e `docs/requirements/business-rules.md`
+2. Prima di leggere i file completi, scansiona gli indici:
+   - Leggi `docs/index.md` per identificare US pertinenti per titolo
+   - Elenca i file ADR disponibili in `docs/decisions/`
+   - Elenca i file in `wiki/` pertinenti per nome
+3. Leggi solo i file rilevanti identificati nel passo 2 — non leggere tutto
+4. Produci la risposta:
+   - Rispondi in modo diretto e sintetico
+   - Cita sempre la fonte: file e sezione specifica (es. "secondo ADR-002, sezione Decisione")
+   - Se la risposta non è presente nella documentazione, dichiaralo esplicitamente
+   - Se la documentazione è ambigua o incompleta su quel punto, segnalalo
+   - Se ci sono fonti che si contraddicono, mostralo
+5. In fondo alla risposta, elenca i file consultati con il path completo
+
+Esempi di utilizzo:
+- `/query "come è stato deciso di gestire l'assimilazione di un habit?"`
+- `/query "ci sono criteri di accettazione delle ultime US non ancora compilati?"`
+- `/query "quali business rule si applicano alla registrazione serale?"`
 
 ---
 
@@ -153,18 +197,21 @@ Attiva quando lavori su codice, architettura, debugging.
    - **Ambiguità** — affermazioni non chiare che richiedono chiarimento
 3. Salva l'analisi in `wiki/requirements/YYYY-MM-DD-[nome-fonte].md`
 4. Per ogni business rule candidata, verifica se è già in `docs/requirements/business-rules.md`
-5. Produci un sommario e chiedi come procedere
+5. Aggiorna `raw/manifest.md` aggiungendo una riga con: file analizzato, data, path output in wiki
+6. Produci un sommario e chiedi come procedere
 
 ---
 
 ### /analyze-mockup [file]
 **Scopo:** Analizzare uno schema, wireframe o mockup ed estrarre requisiti impliciti.
 **Azioni:**
-1. Analizza il file visivo fornito
+1. Analizza il file visivo fornito (immagine, canvas Obsidian `.canvas`, PDF, descrizione testuale)
 2. Identifica: componenti UI, flussi di navigazione, stati, validazioni implicite
 3. Mappa ogni elemento a requisiti funzionali candidati
 4. Segnala elementi non coperti dalle US esistenti
-5. Salva l'analisi in `wiki/requirements/` e chiedi come procedere
+5. Salva l'analisi in `wiki/requirements/YYYY-MM-DD-mockup-[nome].md`
+6. Aggiorna `raw/manifest.md` con il file analizzato
+7. Chiedi come procedere con gli elementi non coperti
 
 ---
 
@@ -182,12 +229,16 @@ Attiva quando lavori su codice, architettura, debugging.
 **Scopo:** Cambiare lo stato di un requisito, user story o altro artefatto.
 **Stati validi per US:** Bozza → In revisione → Approvata → Implementata → Suddivisa → Obsoleta
 **Stati validi per RF:** Proposto → Approvato → Implementato → Eliminato
+**Stati validi per CR:** Aperta → In valutazione → Approvata → Rifiutata → Chiusa
+**Stati validi per OB:** Proposto → Approvato → Raggiunto → Abbandonato
 **Azioni:**
 1. Individua il file corretto dall'ID
-2. Aggiorna il campo Stato nei metadati
-3. Aggiorna la Data ultima modifica
-4. Aggiorna la tabella in `docs/index.md` se applicabile
-5. Logga la modifica con data e motivazione nel file
+2. Verifica che il nuovo stato sia valido per il tipo di artefatto
+3. Aggiorna il campo Stato nei metadati
+4. Aggiorna la Data ultima modifica
+5. Aggiorna la tabella in `docs/index.md` se applicabile
+6. Logga la modifica con data e motivazione nel file
+7. Mostra le modifiche e chiedi conferma prima di salvare
 
 ---
 
@@ -221,6 +272,41 @@ Attiva quando lavori su codice, architettura, debugging.
 3. Identifica gli artefatti impattati (US, RF, BR, ADR)
 4. Valuta l'impatto: Basso / Medio / Alto
 5. Mostra bozza e chiedi conferma prima di salvare in `docs/changes/CR-NNN.md`
+
+---
+
+### /generate-arch [target?]
+**Scopo:** Generare o aggiornare la documentazione tecnica in `docs/architecture/`.
+**Target disponibili:** `class-diagram`, `data-model`, `overview` (default: tutti e tre)
+**Azioni per `class-diagram`:**
+1. Leggi tutti i file `.py` in `src/`
+2. Identifica: classi, metodi pubblici, attributi, relazioni (ereditarietà, composizione, dipendenza)
+3. Genera un diagramma Mermaid `classDiagram` completo
+4. Mostra il diagramma e chiedi conferma
+5. Dopo conferma, salva in `docs/architecture/class-diagram.md`
+
+**Azioni per `data-model`:**
+1. Leggi i file di schema dati (dataclass, modelli Pydantic, file `.json` di esempio, JSON schema)
+2. Documenta: entità principali, campi, tipi, relazioni tra entità
+3. Genera un diagramma Mermaid `erDiagram`
+4. Mostra bozza e chiedi conferma
+5. Dopo conferma, salva in `docs/architecture/data-model.md`
+
+**Azioni per `overview`:**
+1. Leggi `src/` per identificare i moduli principali
+2. Leggi `docs/decisions/ADR-*.md` per decisioni architetturali rilevanti
+3. Leggi `graphify-out/GRAPH_REPORT.md` se disponibile
+4. Scrivi una descrizione dei componenti principali, le loro responsabilità e come interagiscono
+5. Includi un diagramma Mermaid `graph TD` dei componenti
+6. Mostra bozza e chiedi conferma
+7. Dopo conferma, salva in `docs/architecture/overview.md`
+
+**Regole comuni:**
+- Non modificare mai file esistenti in `docs/architecture/` senza mostrare la bozza e ottenere conferma
+- Se un file esiste già, mostra le differenze rispetto alla versione precedente prima di aggiornarlo
+- Aggiungi sempre in fondo al file: `*Generato automaticamente il YYYY-MM-DD — aggiornare dopo ogni refactor significativo.*`
+- Usa sempre Mermaid per i diagrammi (compatibile con MkDocs Material)
+- Documenta in italiano
 
 ---
 
@@ -327,6 +413,17 @@ Scenario: [nome scenario]
 
 ---
 
+### Template manifest raw (raw/manifest.md)
+```markdown
+# Manifest — File Grezzi Analizzati
+
+| File | Tipo | Data analisi | Output wiki |
+|------|------|--------------|-------------|
+| — | — | — | — |
+```
+
+---
+
 ## Regole
 
 ### Nomenclatura
@@ -344,7 +441,7 @@ Scenario: [nome scenario]
 - **può** → requisito facoltativo (may)
 
 ### Comportamento generale
-- Non modificare mai file in `raw/`
+- Non modificare mai file in `raw/` (eccetto `raw/manifest.md`)
 - Non modificare mai file in `graphify-out/`
 - Mostrare sempre una bozza e chiedere conferma prima di scrivere in `docs/`
 - Segnalare sempre ambiguità e dipendenze prima di formalizzare
@@ -355,8 +452,8 @@ Scenario: [nome scenario]
 
 ## Sessione
 
-### All'avvio (senza /resume esplicito)
-Se non viene dato un comando specifico all'avvio, esegui automaticamente `/resume` e attendi istruzioni.
+### All'avvio (senza comando esplicito)
+Se non viene dato un comando specifico all'avvio, esegui automaticamente `/start` e attendi istruzioni.
 
 ### Alla chiusura
 Ricorda sempre all'utente di eseguire `/save` prima di terminare la sessione.

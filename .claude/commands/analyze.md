@@ -10,4 +10,12 @@ Esegui le seguenti azioni:
 3. Per ogni business rule candidata: verifica se è già presente in `docs/requirements/business-rules.md`
 4. Per ogni requisito candidato: verifica se è già coperto da US esistenti in `docs/user-stories/`
 5. Salva l'analisi in `wiki/requirements/YYYY-MM-DD-[nome-fonte].md`
-6. Produci un sommario e chiedi come procedere (es. creare nuove US, aggiungere BR, ecc.)
+6. Aggiorna `raw/manifest.md` aggiungendo una riga con: file analizzato, data analisi, path output in wiki.
+   Se `raw/manifest.md` non esiste, crealo con questa intestazione prima di aggiungere la riga:
+   ```
+   # Manifest — File Grezzi Analizzati
+
+   | File | Tipo | Data analisi | Output wiki |
+   |------|------|--------------|-------------|
+   ```
+7. Produci un sommario e chiedi come procedere (es. creare nuove US, aggiungere BR, ecc.)
