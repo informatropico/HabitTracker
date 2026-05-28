@@ -10,7 +10,7 @@ Una business rule è un vincolo o una politica del dominio che il sistema deve r
 |----|-------------|--------------|-------|-------|
 | [BR-001](#br-001--transizione-ad-assimilato-su-azione-utente) | La transizione ad "Assimilato" avviene esclusivamente su azione esplicita dell'utente | US-007, US-008, OB-001 | Decisione di prodotto 2026-05-27 | Attiva |
 | [BR-002](#br-002--transizione-ad-abbandonato-su-azione-utente) | La transizione ad "Abbandonato" avviene esclusivamente su azione esplicita dell'utente | US-005, US-006, US-007, US-009, OB-002 | Decisione di prodotto 2026-05-27 | Attiva |
-| [BR-003](#br-003--stati-habit-e-transizioni-ammesse) | Stati ammessi per un habit (In corso / Assimilato / Abbandonato) e transizioni valide | US-001, US-008, US-009, US-010, US-011, US-012, US-016 | Modello di dominio | Attiva |
+| [BR-003](#br-003--stati-habit-e-transizioni-ammesse) | Stati ammessi per un habit (In corso / Assimilato / Abbandonato) e transizioni valide, inclusa l'eliminazione definitiva | US-001, US-008, US-009, US-010, US-011, US-012, US-016, US-018 | Modello di dominio | Attiva |
 | [BR-004](#br-004--perimetro-di-habit-attivo) | Solo gli habit "In corso" sono considerati attivi; gli altri restano visibili solo in consultazione storica e archivio | US-001, US-004, US-005, US-006, US-007, US-008, US-009, US-010, US-016 | Modello di dominio | Attiva |
 
 ---
@@ -72,18 +72,21 @@ Coerenza con BR-001. Allineato con OB-002 ("riconoscere e gestire abitudini non 
 ### Descrizione
 Un habit può trovarsi in uno e uno solo dei seguenti stati: **In corso**, **Assimilato**, **Abbandonato**. Sono ammesse le seguenti transizioni:
 
-| Da | A | Origine |
-|----|---|---------|
-| (creazione) | In corso | US-011 |
-| In corso | Assimilato | US-008 (per BR-001) |
-| In corso | Abbandonato | US-009 (per BR-002) |
-| Assimilato | In corso | US-012 |
-| Abbandonato | In corso | US-012 |
+| Da | A | Condizione | Origine |
+|----|---|------------|---------|
+| (creazione) | In corso | — | US-011 |
+| In corso | Assimilato | — | US-008 (per BR-001) |
+| In corso | Abbandonato | — | US-009 (per BR-002) |
+| Assimilato | In corso | — | US-012 |
+| Abbandonato | In corso | — | US-012 |
+| Qualsiasi | [eliminato] | Habit mai selezionato in nessun record di giornata | US-018 |
 
 **Non sono ammesse** transizioni dirette tra Assimilato e Abbandonato: per passare dall'uno all'altro è necessario tornare prima a "In corso".
 
+L'**eliminazione** (`[eliminato]`) non è uno stato del ciclo di vita: rimuove l'habit dal sistema in modo permanente e irreversibile. È applicabile da qualsiasi stato, ma esclusivamente se l'habit non è mai comparso in nessun record di giornata. Un habit che ha avuto anche una sola occorrenza in dichiarazione o consuntivo non è eliminabile.
+
 ### Razionale
-Definisce la macchina a stati canonica del dominio, riferimento condiviso per tutte le US che leggono o modificano lo stato di un habit. La transizione diretta Assimilato↔Abbandonato non ha senso semantico: un habit assimilato che si rimette in discussione è di fatto "rimesso in corso" prima di essere eventualmente abbandonato.
+Definisce la macchina a stati canonica del dominio, riferimento condiviso per tutte le US che leggono o modificano lo stato di un habit. La transizione diretta Assimilato↔Abbandonato non ha senso semantico: un habit assimilato che si rimette in discussione è di fatto "rimesso in corso" prima di essere eventualmente abbandonato. L'eliminazione copre il caso di habit creati per errore o non ancora adottati, che non hanno storia e quindi possono essere rimossi senza perdita di informazione.
 
 ### Metadati
 | Campo | Valore |
@@ -91,10 +94,11 @@ Definisce la macchina a stati canonica del dominio, riferimento condiviso per tu
 | ID | BR-003 |
 | Stato | Attiva |
 | Data creazione | 2026-05-27 |
+| Data ultima modifica | 2026-05-28 |
 | Fonte | Modello di dominio |
 
 ### US impattate
-US-001, US-008, US-009, US-010, US-011, US-012, US-016 (tutte le US che leggono o modificano lo stato di un habit).
+US-001, US-008, US-009, US-010, US-011, US-012, US-016, US-018 (tutte le US che leggono o modificano lo stato di un habit).
 
 ---
 

@@ -57,5 +57,6 @@ Come Utente ho la necessità di comprendere quali abitudini non riesco a rispett
 | [US-015](user-stories/US-015.md) | Visualizzazione habit attivi in giornate precedenti non completati | Bozza | — |
 | [US-016](user-stories/US-016.md) | Accesso all'elenco degli habit | Bozza | — |
 | [US-017](user-stories/US-017.md) | Segnale visivo di giornata completata | Bozza | 2026-05-27 |
+| [US-018](user-stories/US-018.md) | Eliminazione definitiva di un habit mai utilizzato | Bozza | 2026-05-28 |
 
 
